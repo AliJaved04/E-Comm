@@ -1,8 +1,8 @@
 <template>
   <Navbar />
 
-  <div class="container">
-    <div v-if="productsList" class="row mb-4 mt-4">
+  <div v-if="productsList" class="container">
+    <div class="row mb-4 mt-4">
       <div
         v-for="(item, index) in productsList"
         :key="index"
@@ -25,7 +25,6 @@ export default {
       this.isAuth = true;
     }
 
-    console.log(this.productsList);
     fetch("https://dummyjson.com/products")
       .then((res) => res.json())
       .then((data) => (this.productsList = data.products));

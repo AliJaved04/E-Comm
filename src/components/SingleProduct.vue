@@ -33,8 +33,6 @@ export default {
     } else {
       this.isAuth = true;
     }
-
-    console.log(this.item.thumbnail);
   },
   data() {
     return {
